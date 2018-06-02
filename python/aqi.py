@@ -109,8 +109,8 @@ if __name__ == "__main__":
         with open('/var/www/html/aqi.json') as json_data:
             data = json.load(json_data)
 
-        # check if length is more than 100 and delete first element
-        if len(data) > 100:
+        # check if length is more than 10000 and delete first element
+        if len(data) > 10000:
             data.pop(0)
 
         # append new values
