@@ -1,4 +1,4 @@
-function loadchart() {
+function func1() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
