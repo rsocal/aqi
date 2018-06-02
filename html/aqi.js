@@ -7,6 +7,7 @@ function getData() {
   }).catch(err => {
     console.log(err);
   })
+	loadchart()
 }
 
 function updateHtml(data) {
@@ -130,7 +131,7 @@ function calcAQIpm10(pm10) {
 	return aqipm10.toFixed(0);
 }
 #Additional Chart
-window.onload = function () {
+function loadchart() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
