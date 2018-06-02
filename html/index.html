@@ -6,23 +6,7 @@
     <title>AQI</title>
     <script src="aqi.js"></script>
     <link rel='stylesheet' href='style.css'>
-  </head>
-  <body onload="getData()">
-    <div class="container">
-      <h1>AQI</h1>
-      <p class='time' id="time"></p>
-      <div class='aqi-container' id="containerPm25">
-          <div class='aqi-label'>AQI (PM2.5)</div>
-          <div class='aqi' id="aqiPm25"></div>
-          <div class='pm-label' id="pm25"></div>
-      </div>
-      <div class='aqi-container' id="containerPm10">
-          <div class='aqi-label'>AQI (PM10)</div>
-          <div class='aqi' id="aqiPm10"></div>
-          <div class='pm-label' id="pm10"></div>
-      </div>
-      
-      <script>
+	  <script>
 window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
@@ -56,8 +40,23 @@ chart.render();
 
 }
 </script>
-</head>
-<body>
+  </head>
+  <body onload="getData()">
+    <div class="container">
+      <h1>AQI</h1>
+      <p class='time' id="time"></p>
+      <div class='aqi-container' id="containerPm25">
+          <div class='aqi-label'>AQI (PM2.5)</div>
+          <div class='aqi' id="aqiPm25"></div>
+          <div class='pm-label' id="pm25"></div>
+      </div>
+      <div class='aqi-container' id="containerPm10">
+          <div class='aqi-label'>AQI (PM10)</div>
+          <div class='aqi' id="aqiPm10"></div>
+          <div class='pm-label' id="pm10"></div>
+      </div>
+      
+
 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
       
