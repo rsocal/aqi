@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AQI</title>
     <script src="aqi.js" language="javascript"></script>
+	  
+	  <script language="javascript">
+function start(){
+    getData();
+    func2();
+}
+</script>
+	  
     <link rel='stylesheet' href='style.css'>
 
   </head>
-  <body onload="getData()">
+  <body onload="start()">
     <div class="container">
       <h1>AQI</h1>
       <p class='time' id="time"></p>
@@ -26,7 +34,7 @@
       
 	  </div>
 	  <script language="javascript">
-window.onload = function () {
+function func2() {
 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
