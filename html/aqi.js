@@ -1,5 +1,13 @@
-function func1() {
-var chart = new CanvasJS.Chart("chartContainer", {
+function getData() {
+  fetch("aqi.json").then(response => {
+    response.json().then(data => {
+      //console.log(data);
+      updateHtml(data[data.length-1]);
+    })
+  }).catch(err => {
+    console.log(err);
+  })
+	var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
@@ -27,17 +35,6 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 chart.render();
-}
-
-function getData() {
-  fetch("aqi.json").then(response => {
-    response.json().then(data => {
-      //console.log(data);
-      updateHtml(data[data.length-1]);
-    })
-  }).catch(err => {
-    console.log(err);
-  })
 }
 
 function updateHtml(data) {
