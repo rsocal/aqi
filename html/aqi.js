@@ -7,6 +7,7 @@ function getData() {
   }).catch(err => {
     console.log(err);
   })
+	loadchart()
 }
 
 function updateHtml(data) {
