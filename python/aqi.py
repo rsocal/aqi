@@ -117,7 +117,7 @@ if __name__ == "__main__":
         data.append({'pm25': values[0], 'pm10': values[1], 'time': time.strftime("%d.%m.%Y %H:%M:%S")})
 
         # save it
-        with open('/var/www/html/aqi.json', 'w') as outfile:
+        with open('/var/www/html/aqi/aqi.json', 'w') as outfile:
             json.dump(data, outfile)
 
         print("Going to sleep for 5min...")
